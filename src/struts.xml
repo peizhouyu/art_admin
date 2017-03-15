@@ -1,0 +1,44 @@
+<!DOCTYPE struts 
+PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 2.1//EN" 
+"http://struts.apache.org/dtds/struts-2.1.dtd">
+<struts>
+
+	<constant name="struts.custom.i18n.resources" value="utf-8" />
+	
+	
+	<package name="main"  extends="struts-default">
+	
+		
+		<global-results>
+			<result name="login">/index.jsp</result>
+			
+		</global-results>
+	
+		<!-- 报名拦截器 -->
+		<action name="register" class="cn.mrpei.action.RegisterAction"  method="register">
+			<result name="success" type="redirect">http://www2015.tyut.edu.cn/cn/index.html</result>
+			<result name="error">register.jsp</result>
+		</action>
+		
+		<action name="login" class="cn.mrpei.action.LoginAction" method="login">
+			<result name="success" type="redirect">getUsersList</result>
+			<result name="error">404.jsp</result>
+		</action>
+		
+		<action name="getUsersList" class="cn.mrpei.action.UsersManage" method="getUsers">
+			<result name="success">admin/admin.jsp</result>
+			<result name="error">404.jsp</result>
+		</action>
+		
+		<!--  生成excel表 -->
+		<action name="exportExcle" class="cn.mrpei.action.UsersManage" method="getUsers">
+			<result name="success">admin/exportExcel.jsp</result>
+			<result name="error">404.jsp</result>
+		</action>
+		
+	</package>
+	
+	
+	
+</struts>
+	

@@ -1,0 +1,75 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 2016-10-11 19:24:22 by Hibernate Tools 5.2.0.Beta1 -->
+<hibernate-mapping>
+    <class name="cn.mrpei.bean.Users" table="users" catalog="yishutuan" optimistic-lock="version">
+        <id name="id" type="java.lang.Integer">
+            <column name="id" />
+            <generator class="identity" />
+        </id>
+        <property name="name" type="string">
+            <column name="name" />
+        </property>
+        <property name="sex" type="string">
+            <column name="sex" />
+        </property>
+        <property name="nation" type="string">
+            <column name="nation" />
+        </property>
+        <property name="nativePlace" type="string">
+            <column name="native_place" />
+        </property>
+        <property name="studentNumber" type="java.lang.Integer">
+            <column name="student_number" />
+        </property>
+        <property name="birthday" type="string">
+            <column name="birthday" />
+        </property>
+        <property name="politicsStatus" type="string">
+            <column name="politics_status" />
+        </property>
+        <property name="class_" type="string">
+            <column name="class" />
+        </property>
+        <property name="phone" type="string">
+            <column name="phone" />
+        </property>
+        <property name="qq" type="string">
+            <column name="qq" />
+        </property>
+        <property name="email" type="string">
+            <column name="email" />
+        </property>
+        <property name="sushe" type="string">
+            <column name="sushe" length="65535" />
+        </property>
+        <property name="department" type="string">
+            <column name="department" not-null="true" />
+        </property>
+        <property name="adjust" type="string">
+            <column name="adjust" />
+        </property>
+        <property name="info" type="string">
+            <column name="info" length="65535" />
+        </property>
+        <property name="remark" type="string">
+            <column name="remark" length="65535" />
+        </property>
+        <property name="time" type="string">
+            <column name="time" />
+        </property>
+        <property name="devices" type="string">
+            <column name="devices" />
+        </property>
+        <property name="operatingSystem" type="string">
+            <column name="operating_system" />
+        </property>
+        <property name="browser" type="string">
+            <column name="browser" />
+        </property>
+        <property name="ip" type="string">
+            <column name="ip" />
+        </property>
+    </class>
+</hibernate-mapping>
